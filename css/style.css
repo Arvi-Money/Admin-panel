@@ -12,9 +12,12 @@ a{
     text-decoration: none;
 }
 
+
+/* Sidebar */
+
 .sidebar{
     width: 300px;
-    background-color: #252620;
+    background-color: #25262d;
     height: 100vh;
     position: fixed;
     left: 0px;
@@ -24,9 +27,8 @@ a{
 }
 
 .main{
-    width: calc(100%-300px);
+    /* width: calc(100%-300px); */
     margin-left: 300px;
-    padding: 16px;
 }
 
 .sidebar_header{
@@ -59,6 +61,7 @@ a{
 
 .sidebar_nav ul li:hover{
     background: #393A42;
+    color: white;
 }
 
 .sidebar_nav ul li a{
@@ -70,10 +73,6 @@ a{
     font-style: normal;
     font-weight: 400;
     line-height: 22px; /* 146.667% */
-}
-
-.sidebar_nav ul li a:hover{
-    color: white;
 }
 
 .sidebar_footer{
@@ -95,6 +94,52 @@ a{
 }
 
 
+/* Main */
+
+.main{
+    width: 1100px;
+    padding: 16px 17px 103px 17px;
+    background: #F6F6F6;
+}
+
+.main_header{
+    display: flex;
+    gap: 815px;
+    margin-bottom: 16px;
+}
+
+.main_header h1{
+    color: #212121;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px; /* 135.714% */
+}
+
+
+.header_btn{
+    width: 144px;
+    height: 38px;
+    padding: 8px 16px;
+    align-items: center;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    background: var(--Deep-Purple, #7840B0);
+}
+
+
+table{
+    background-color: #fff;
+}
+
+tr.table_header{
+    padding: 16px 790px 16px 20px;
+}
+
+
+
+
 @media screen and (max-width: 1000px) {
     .sidebar{
         width: 100px;
@@ -105,24 +150,34 @@ a{
         gap: 20px;
     }
 
+    .settings_icon img{
+        width: 30px;
+    }
+
     .logo span{
         display: none;
     }
     
     .sidebar_nav ul li a img{
-        margin-left: 10px;
+        margin-left: 17px;
+        width: 30px;
     }
 
     li a span{
         display: none;
     }
 
-
-     .sidebar_nav ul li .panel img{
-        display: none;
+    .sidebar_footer img{
+        margin-left: 17px;
+        width: 30px;
     }
 
     .sidebar_footer span{
         display: none;
+    }
+
+    .main{
+        width: calc(100%-100px);
+        margin-left: 100px;
     }
 }
